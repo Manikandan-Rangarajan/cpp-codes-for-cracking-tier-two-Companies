@@ -5,8 +5,6 @@ void maximum(int arr[],int n){
     int i=0,max=arr[0];
     for(i;i<n;i++){
         if(max>arr[i]){
-            max = max;
-        }else{
             max = arr[i];
         }
     }
