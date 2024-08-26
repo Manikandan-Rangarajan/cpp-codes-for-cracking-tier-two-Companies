@@ -1,1 +1,47 @@
+Function Definition: reverse
 
+void reverse(string str){
+    int len = str.length();
+    string reversed = "";
+    for(int i = len - 1; i >= 0; i--){
+        reversed += str[i];
+    }
+    cout << "The reversed string is: " << reversed << endl;
+}
+Purpose: The reverse function takes a string as input, reverses it, and prints the reversed string.
+
+Variables:
+
+len: Stores the length of the input string str using the str.length() method.
+reversed: Initializes an empty string that will store the reversed version of str.
+For Loop:
+
+Initialization: The loop starts with i = len - 1, which is the index of the last character in the string.
+Condition: The loop continues as long as i >= 0, ensuring that all characters from the end to the start are processed.
+Decrement: i is decremented by 1 in each iteration, moving from the end of the string to the beginning.
+Action: In each iteration, str[i] (the character at index i) is appended to the reversed string.
+Output:
+
+After the loop finishes, the reversed string is printed to the console using cout.
+
+Main Function
+
+int main() {
+    string str;
+    cout << "Enter a string" << endl;
+    getline(cin, str);
+    reverse(str);
+    return 0;
+}
+Purpose: The main function is the entry point of the program. It handles user input, calls the reverse function, and terminates the program.
+
+Input:
+
+The program prompts the user to "Enter a string" using cout.
+getline(cin, str) is used to read the entire input line, including spaces. This is an improvement over cin >> str, which would only capture the first word (up to the first space).
+Function Call:
+
+The reverse function is called with the input string str as its argument. This function processes the string and prints the reversed result.
+Return:
+
+return 0; indicates successful program termination. The return value 0 is a standard convention in C++ to signal that the program ended without errors.
