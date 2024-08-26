@@ -1,1 +1,48 @@
+Function Definition: maximum
+void maximum(int arr[], int n) {
+    int i = 0, max = arr[0];
+    for (i; i < n; i++) {
+        if (max > arr[i]) {
+            max = max;
+        } else {
+            max = arr[i];
+        }
+    }
+    cout << "The Maximum of the given array is: " << max << endl;
+}
+Purpose: The maximum function is intended to find and print the maximum value in the array arr.
 
+Variables:
+
+max: Initialized to the first element of the array (arr[0]), which will store the maximum value found during the iteration.
+For Loop:
+
+Initialization: The loop starts with i = 0 and runs until i < n, meaning it iterates through all elements of the array.
+Condition: Inside the loop, the code checks if max > arr[i]. If true, it unnecessarily reassigns max to max itself. If false, it updates max to arr[i].
+Problem: The check if (max > arr[i]) and the corresponding action max = max; is redundant. It does nothing, which is inefficient and should be corrected.
+Output:
+
+After the loop finishes, the maximum value found in the array is printed.
+Main Function
+
+int main() {
+    int n;
+    cout << "Enter Limit of Array" << endl;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    maximum(arr, n);
+    return 0;
+}
+Purpose: The main function handles user input, calls the maximum function, and terminates the program.
+
+Input:
+
+The program prompts the user to enter the limit (size) of the array, n.
+Then, it declares an array arr of size n.
+A for loop is used to populate the array with n elements. However, there is a bug in the loop condition: i <= n should be i < n to avoid accessing out-of-bound memory.
+Function Call:
+
+The maximum function is called with the array arr and its size n as arguments. The function finds the maximum value and prints it.
