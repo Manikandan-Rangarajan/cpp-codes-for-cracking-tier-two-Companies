@@ -2,18 +2,18 @@
 using namespace std;
 
 void reverse(string str){
-    int i,j,len =str.length();
-    string reversed="";
-    for(i=len;i>=0;i--){
+    int len = str.length();
+    string reversed = "";
+    for(int i = len - 1; i >= 0; i--){
         reversed += str[i];
     }
-    cout<<"The reversed string is: "<<reversed<<endl;
+    cout << "The reversed string is: " << reversed << endl;
 }
 
 int main() {
     string str;
-    cout<<"Enter a string"<<endl;
-    cin>>str;
+    cout << "Enter a string" << endl;
+    getline(cin, str); 
     reverse(str);
     return 0;
 }
