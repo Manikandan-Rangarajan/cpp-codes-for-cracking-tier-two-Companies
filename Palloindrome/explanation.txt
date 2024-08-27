@@ -1,0 +1,55 @@
+Function Definition: pallindrome
+
+bool pallindrome(string str) {
+    int i = 0;
+    int j = str.size() - 1;
+    while (i < j) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+Purpose: The pallindrome function determines whether the input string str is a palindrome.
+
+Variables:
+
+i: Initializes to 0, representing the starting index of the string.
+j: Initializes to str.size() - 1, representing the last index of the string.
+While Loop:
+
+Condition: The loop runs while i < j, meaning it compares characters from the start (i) and the end (j) moving towards the center.
+Comparison: If str[i] is not equal to str[j], the function immediately returns false, indicating that the string is not a palindrome.
+Increment/Decrement: i is incremented and j is decremented in each iteration, moving towards the center of the string.
+Return Value:
+
+If the loop completes without finding any unequal characters, the function returns true, indicating the string is a palindrome.
+
+Main Function
+
+int main() {
+    string str;
+    cout << "Enter a String" << endl;
+    getline(cin, str);
+    if (pallindrome(str) != 1) {
+        cout << "The string is not a Palindrome" << endl;
+    } else {
+        cout << "The string is a Palindrome" << endl;
+    }
+    return 0;
+}
+Purpose: The main function handles user input, calls the pallindrome function, and displays whether the string is a palindrome.
+
+Input:
+
+The program prompts the user to enter a string using cout.
+getline(cin, str) is used to read the entire line of input (including spaces), storing it in the variable str.
+Function Call:
+
+The pallindrome function is called with the input string str as its argument. The function checks if the string is a palindrome.
+Output:
+
+If the pallindrome function returns false, the program outputs "The string is not a Palindrome".
+If it returns true, the program outputs "The string is a Palindrome".
