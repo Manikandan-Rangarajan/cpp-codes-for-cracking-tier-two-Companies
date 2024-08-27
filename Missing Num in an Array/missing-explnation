@@ -1,0 +1,48 @@
+Variable Declaration and Input:
+
+int i, n, mis, count, tot;
+cout << "Enter a Number(should be n-1):: " << endl;
+cin >> n;
+int arr[n];
+cout << "Enter the array elements (1 to n, with one missing):  " << endl;
+for(i = 0; i < n; i++) {
+    cin >> arr[i];
+}
+Variables:
+n: Represents the number of elements in the array (which should be one less than the total sequence length).
+arr[n]: An array of size n where the user will input the elements.
+tot: This will hold the sum of the first n+1 natural numbers.
+count: This will accumulate the sum of the array elements.
+mis: Will store the missing number after calculation.
+User Input:
+The user is prompted to enter the value of n.
+The user is then asked to input n elements into the array, which should be the numbers from 1 to n+1 with one missing.
+
+Calculate the Total Sum of First n+1 Natural Numbers:
+
+tot = ((n+1)*(n+2))/2;
+This line calculates the sum of all numbers from 1 to n+1 using the formula:
+
+Sum= (n+1)×(n+2)/2
+​
+ 
+The formula calculates what the sum of the sequence would be if no numbers were missing.
+
+Calculate the Sum of Array Elements:
+
+for(i = 0; i < n; i++) {
+    count += arr[i];
+}
+This loop iterates through the array, summing all the values the user input.
+The result is stored in the variable count.
+
+Determine the Missing Number:
+
+mis = tot - count;
+The missing number is calculated by subtracting the sum of the array elements (count) from the total sum of the first n+1 natural numbers (tot).
+Since tot represents the sum of the full sequence, the difference will give the missing number.
+
+Output the Missing Number:
+
+cout << mis << " iss the missing number in the arrray" << endl;
+The program outputs the missing number.
