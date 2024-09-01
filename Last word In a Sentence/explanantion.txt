@@ -1,0 +1,17 @@
+Steps:
+1. Initialization:
+   - `len = str.size();` retrieves the length of the string `str`.
+   - `string last = "";` initializes an empty string `last` to store the last word.
+
+2. Handling Trailing Spaces:
+   - The `while` loop checks if there are trailing spaces in the string and reduces the length (`len`) accordingly. This ensures that any spaces at the end of the string are ignored when finding the last word.
+
+3. Finding the Last Word:
+   - The `for` loop starts from the last character of the string (`i = len - 1`) and moves backward.
+   - **Condition**: If the loop encounters a space (`str[i] == ' '`), it breaks out of the loop, as this indicates that the beginning of the last word has been reached.
+   - **Prepending**: Each character from the last word is added to the beginning of the `last` string using `last = str[i] + last;`. This approach ensures that the word is correctly ordered.
+
+4. Return:
+   - The function returns the `last` string, which contains the last word from the input string.
+
+This function efficiently extracts and returns the last word from any given input string, ignoring any trailing spaces.
