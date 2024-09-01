@@ -1,0 +1,25 @@
+Explanation of Functionalities:
+
+1. **Intersection Functionality (`Intersection` function)**:
+   - **Purpose**: The `Intersection` function identifies the common elements (intersection) between two arrays.
+   - **Logic**:
+     - **Nested Loops**: 
+       - The outer loop iterates through each element of the first array (`arr`).
+       - The inner loop compares the current element of the first array (`arr[i]`) with each element of the second array (`arr1`).
+     - **Condition Check**: If an element from the first array (`arr[i]`) matches an element from the second array (`arr1[j]`), that element is considered part of the intersection.
+     - **Storing Intersection**: The matching element is stored in a `vector<int>` called `intersection`, which keeps track of all common elements found.
+     - **Break Statement**: After finding a match, the inner loop breaks, moving on to the next element of the first array. This prevents multiple entries of the same element if it
+     appears more than once in the second array.
+
+   - **Output**: 
+     - If the `intersection` vector is empty (no common elements), the function prints `"No common elements found."`
+     - If common elements are found, the function prints them as the intersection of the two arrays.
+
+2. **Main Functionality (`main` function)**:
+   - **Purpose**: The `main` function gathers input from the user and invokes the `Intersection` function to find and display the intersection of two arrays.
+   - **User Input**:
+     - The program first asks for the sizes (`n` and `m`) of the two arrays.
+     - Then, it prompts the user to input elements for both arrays (`arr` and `arr1`).
+   - **Function Call**: The `Intersection` function is called with the two arrays and their respective sizes as arguments.
+   - **Output**: Based on the result from the `Intersection` function, the program outputs the common elements between the two arrays or a message indicating that no common
+   elements were found.
