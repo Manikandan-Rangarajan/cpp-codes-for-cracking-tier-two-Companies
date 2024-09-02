@@ -1,0 +1,32 @@
+This C++ program implements the Merge Sort algorithm, a popular and efficient sorting technique based on the "divide and conquer" strategy. Here's a step-by-step explanation of the code:
+
+1. Headers and Namespace
+The program includes the <bits/stdc++.h> header, which is a catch-all header file that includes almost every standard C++ library.
+The using namespace std; directive is used to avoid prefixing standard library names with std::.
+2. Merge Function
+Purpose: The merge function combines two sorted halves of an array into a single sorted array.
+Parameters:
+arr: The array to be sorted.
+left, mid, right: Indices that define the boundaries of the two subarrays to be merged.
+Process:
+The function first creates two temporary vectors, leftarr and rightarr, to hold the elements of the left and right subarrays, respectively.
+It then copies the corresponding elements from the main array into these vectors.
+Two pointers i and j are used to track the current elements in leftarr and rightarr. The k pointer tracks the position in the original array.
+The function merges the two subarrays by comparing elements from leftarr and rightarr, placing the smaller element back into the original array.
+If there are remaining elements in either leftarr or rightarr, they are copied back into the original array.
+3. Merge Sort Function
+Purpose: The mergeSort function recursively divides the array into two halves, sorts each half, and then merges them back together.
+Parameters:
+arr: The array to be sorted.
+left, right: The indices marking the current segment of the array to be sorted.
+Process:
+The function checks if left is less than right, ensuring there's more than one element to sort.
+It calculates the midpoint mid and recursively calls mergeSort on the left and right halves.
+After sorting the two halves, it merges them using the merge function.
+4. Main Function
+Input:
+The user is prompted to enter the size of the array (n) and then the elements of the array.
+Sorting:
+The mergeSort function is called to sort the array.
+Output:
+The sorted array is printed to the console.
